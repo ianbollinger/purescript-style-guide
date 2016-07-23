@@ -8,6 +8,8 @@ no question as to how something should be formatted.
 
 This style guide is licensed under the Creative Commons Zero license.
 
+## Table of contents
+
 - [1. Formatting](#1-formatting)
   * [1.1. Lines should be no longer than 80 characters](#11-lines-should-be-no-longer-than-80-characters)
   * [1.2. Do not use tabs](#12-do-not-use-tabs)
