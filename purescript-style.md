@@ -8,6 +8,19 @@ no question as to how something should be formatted.
 
 This style guide is licensed under the Creative Commons Zero license.
 
+- [1. Formatting](#1-formatting)
+  * [1.1. Lines should be no longer than 80 characters](#11-lines-should-be-no-longer-than-80-characters)
+  * [1.2. Do not use tabs](#12-do-not-use-tabs)
+  * [1.3. Indent with 2 spaces](#13-indent-with-2-spaces)
+  * [1.4. Separate top-level definitions with a blank line](#14-separate-top-level-definitions-with-a-blank-line)
+  * [1.5. Surround operators with spaces](#15-surround-operators-with-spaces)
+  * [1.6. No space after a lambda](#16-no-space-after-a-lambda)
+  * [1.7. Lines must not have trailing spaces](#17-lines-must-not-have-trailing-spaces)
+  * [1.8. Place each data type constructor on its own line](#18-place-each-data-type-constructor-on-its-own-line)
+  * [1.9. Don't align types within record field declarations](#19-dont-align-types-within-record-field-declarations)
+  * [1.10. Each element in a list on its own line](#110-each-element-in-a-list-on-its-own-line)
+  * [1.11. Format export lists like lists](#111-format-export-lists-like-lists)
+
 ## 1. Formatting
 
 ### 1.1. Lines should be no longer than 80 characters
