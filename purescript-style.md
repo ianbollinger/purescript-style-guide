@@ -52,7 +52,7 @@ especially if tabs have been mixed with spaces.
 
 ### 1.3. Indent with 2 spaces
 
-Code blocks should be indented with **2 spaces***.
+Code blocks should be indented with **2 spaces**.
 
 #### Examples
 
