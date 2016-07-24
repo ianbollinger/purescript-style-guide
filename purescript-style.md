@@ -22,6 +22,11 @@ This style guide is licensed under the Creative Commons Zero license.
   * [1.9. Don't align types within record field declarations](#19-dont-align-types-within-record-field-declarations)
   * [1.10. Each element in a list on its own line](#110-each-element-in-a-list-on-its-own-line)
   * [1.11. Format export lists like lists](#111-format-export-lists-like-lists)
+- [2. Naming](#2-naming)
+  * [2.1. Use camel case for function names](#21-use-camel-case-for-function-names)
+  * [2.2. Use upper camel case for type names](#22-use-upper-camel-case-for-type-names)
+  * [2.3. Do not use all capitals for acronyms](#23-do-not-use-all-capitals-for-acronyms)
+  * [2.4. Use the singular for module names](#24-use-the-singular-for-module-names)
 
 ## 1. Formatting
 
@@ -151,3 +156,55 @@ module Data.Array
   , sort
   ) where
 ```
+
+## 2. Naming
+
+### 2.1. Use camel case for function names
+
+Functions must be written in camel case.
+
+#### Examples
+
+* `functionName`
+
+#### Rationale
+
+Functions in PureScript must begin with a lower case letter.
+
+### 2.2. Use upper camel case for type names
+
+Data types and constructors must be written in upper camel case.
+
+#### Examples
+
+* `DataType`
+
+#### Rationale
+
+Data types and constructors in PureScript must begin with a capital letter.
+
+### 2.3. Do not use all capitals for acronyms
+
+Only the first letter of an acronym should be capitalized.
+
+#### Examples
+
+Write `HtmlParser` instead of `HTMLParser`.
+
+#### Rationale
+
+Names containing adjacent capitals that belong to separate words may hinder
+readability.
+
+#### Exceptions
+
+Two letter acronyms should have both letters capitalized--for example, `ST`.
+
+### 2.4. Use the singular for module names
+
+Use the singular when naming modules.
+
+#### Examples
+
+* Use `Data.String` instead of `Data.Strings`.
+* Use `Data.Function` instead of `Data.Functions`.
