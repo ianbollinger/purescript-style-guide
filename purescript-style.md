@@ -87,7 +87,7 @@ Do not insert a space after the lambda symbol (backslash or `\`).
 
 ### 1.7. Lines must not have trailing spaces
 
-Remove any whitespace at the end of each line of source code.
+Spaces must not appear at the end of any line of source code.
 
 ### 1.8. Place each data type constructor on its own line
 
@@ -170,7 +170,7 @@ Functions must be written in camel case.
 
 #### Rationale
 
-Functions in PureScript must begin with a lower case letter.
+Syntactically, functions in PureScript *must* begin with a lower case letter.
 
 ### 2.2. Use upper camel case for type names
 
@@ -182,7 +182,7 @@ Data types and constructors must be written in upper camel case.
 
 #### Rationale
 
-Data types and constructors in PureScript must begin with a capital letter.
+Syntactically, data types and constructors in PureScript *must* begin with a capital letter.
 
 ### 2.3. Use all capitals for effect names
 
@@ -213,7 +213,7 @@ Two letter acronyms should have both letters capitalized--for example, `ST`.
 
 ### 2.5. Use the singular for module names
 
-Use the singular when naming modules.
+Module names should be in the singular.
 
 #### Examples
 
