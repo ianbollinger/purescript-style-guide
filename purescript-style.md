@@ -22,6 +22,7 @@ This style guide is licensed under the Creative Commons Zero license.
   * [1.9. Don't align types within record field declarations](#19-dont-align-types-within-record-field-declarations)
   * [1.10. Each element in a list on its own line](#110-each-element-in-a-list-on-its-own-line)
   * [1.11. Format export lists like lists](#111-format-export-lists-like-lists)
+  * [1.12. Doubly indent nested record or array literals](#112-doubly-indent-nested-record-or-array-literals)
 - [2. Naming](#2-naming)
   * [2.1. Use camel case for function names](#21-use-camel-case-for-function-names)
   * [2.2. Use upper camel case for type names](#22-use-upper-camel-case-for-type-names)
@@ -156,6 +157,28 @@ module Data.Array
   , singleton
   , sort
   ) where
+```
+
+### 1.12. Doubly indent nested record or array literals
+
+When nesting record or array literals, the nested literal should be doubly indented (that is, indented 4 spaces.)
+
+#### Examples
+
+```purescript
+{ bounds: 
+    { x: 0
+    , y: 0
+    , width: 400
+    , height: 300
+    }
+, color: RGB 128 0 0
+, children:
+    [ component1
+    , component2
+    , component3
+    ]
+}
 ```
 
 ## 2. Naming
