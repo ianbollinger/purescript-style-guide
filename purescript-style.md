@@ -34,7 +34,7 @@ This style guide is licensed under the Creative Commons Zero license.
   * [5.1. Avoid over-using point-free style](#51-avoid-over-using-point-free-style)
   * [5.2. Code must be warning-free](#52-code-must-be-warning-free)
 
-## 1. General-formatting
+## 1. General formatting
 
 ### 1.1. Lines should be no longer than 80 characters
 
