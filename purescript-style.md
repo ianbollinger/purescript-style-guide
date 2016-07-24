@@ -21,8 +21,9 @@ This style guide is licensed under the Creative Commons Zero license.
   * [1.8. Place each data type constructor on its own line](#18-place-each-data-type-constructor-on-its-own-line)
   * [1.9. Don't align types within record field declarations](#19-dont-align-types-within-record-field-declarations)
   * [1.10. Place each element in a long array on its own line](#110-place-each-element-in-a-long-array-on-its-own-line)
-  * [1.11. Format export lists like arrays](#111-format-export-lists-like-arrays)
-  * [1.12. Doubly indent nested record or array literals](#112-doubly-indent-nested-record-or-array-literals)
+  * [1.11. Precede items in arrays, records, and import lists with commas](#111-precede-items-in-arrays-records-and-import-lists-with-commas])
+  * [1.12. Format export lists like arrays](#112-format-export-lists-like-arrays)
+  * [1.13. Doubly indent nested record or array literals](#113-doubly-indent-nested-record-or-array-literals)
 - [2. Naming](#2-naming)
   * [2.1. Use camel case for function names](#21-use-camel-case-for-function-names)
   * [2.2. Use upper camel case for type names](#22-use-upper-camel-case-for-type-names)
@@ -143,9 +144,9 @@ data Rectangle = Rectangle
 
 ### 1.10. Place each element in a long array on its own line
 
-Each successive element in a long array should be placed on its own line, preceded by
-a comma and a space. If an array literal doesn't fit on a single line then it should
-be considered "long".
+Each successive element in a long array should be placed on its own line.
+If an array literal doesn't fit on a single line then it should be
+considered "long".
 
 #### Rationale
 
@@ -164,7 +165,28 @@ elements =
   ]
 ```
 
-### 1.11. Format export lists like arrays
+### 1.11. Precede items in arrays, records, and import lists with commas
+
+Each successive element in a long array, record, or import list should be preceded by
+a comma and a space.
+
+#### Rationale
+
+PureScript does not support trailing commas, thus preceding an element with a comma
+makes it easier to add and remove items to the end of a list.
+
+#### Examples
+
+```purescript
+data Rgba = Rgba
+  { red :: Int
+  , green :: Int
+  , blue :: Int
+  , alpha :: Int
+  }
+```
+
+### 1.12. Format export lists like arrays
 
 Export lists should be formatted like regular arrays above (except with
 parentheses instead of square brackets.)
@@ -180,7 +202,7 @@ module Data.Array
   ) where
 ```
 
-### 1.12. Doubly indent nested record or array literals
+### 1.13. Doubly indent nested record or array literals
 
 When nesting record or array literals, the nested literal should be doubly indented (that is, indented 4 spaces.)
 
@@ -193,7 +215,7 @@ When nesting record or array literals, the nested literal should be doubly inden
     , width: 400
     , height: 300
     }
-, color: RGB 128 0 0
+, color: Rgba 128 0 0 255
 , children:
     [ component1
     , component2
