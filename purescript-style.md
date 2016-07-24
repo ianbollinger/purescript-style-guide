@@ -46,6 +46,16 @@ arbitrary and chosen for historical reasons.
 
 * URLs must not be split over multiple lines.
 
+#### Examples
+
+```purescript
+logShow
+  :: forall a eff
+   . Show a
+  => a
+  -> Eff (console :: CONSOLE | eff) Unit
+```
+
 ### 1.2. Do not use tabs
 
 Source files must not contain tab characters; use spaces for indentation.
