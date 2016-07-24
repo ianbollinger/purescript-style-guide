@@ -10,7 +10,7 @@ This style guide is licensed under the Creative Commons Zero license.
 
 ## Table of contents
 
-- [1. Formatting](#1-formatting)
+- [1. General formatting](#1-general-formatting)
   * [1.1. Lines should be no longer than 80 characters](#11-lines-should-be-no-longer-than-80-characters)
   * [1.2. Do not use tabs](#12-do-not-use-tabs)
   * [1.3. Indent with 2 spaces](#13-indent-with-2-spaces)
@@ -29,8 +29,11 @@ This style guide is licensed under the Creative Commons Zero license.
   * [2.3. Use all capitals for effect names](#23-use-all-capitals-for-effect-names)
   * [2.4. Do not use all capitals for acronyms](#24-do-not-use-all-capitals-for-acronyms)
   * [2.5. Use the singular for module names](#25-use-the-singular-for-module-names)
+- [3. Miscellaneous](#3-miscellaneous)
+  * [5.1. Avoid over-using point-free style](#51-avoid-over-using-point-free-style)
+  * [5.2. Code must be warning-free](#52-code-must-be-warning-free)
 
-## 1. Formatting
+## 1. General-formatting
 
 ### 1.1. Lines should be no longer than 80 characters
 
@@ -262,3 +265,18 @@ Module names should be in the singular.
 
 * Use `Data.String` instead of `Data.Strings`.
 * Use `Data.Function` instead of `Data.Functions`.
+
+## 3. Miscellaneous
+
+### 5.1. Avoid over-using point-free style
+
+Point-free style should be avoided when it inhibits readability.
+
+### 5.2. Code must be warning-free
+
+Code must not produce warnings when compiled.
+
+#### Rationale
+
+Ignoring warnings that are false positives or benign can eventually make
+it difficult to identify warnings that are serious.
