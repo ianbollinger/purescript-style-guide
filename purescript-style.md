@@ -227,16 +227,18 @@ Effects should be written in all capital letters.
 
 ### 2.4. Do not use all capitals for acronyms
 
-Only the first letter of an acronym should be capitalized.
+Acronyms should be capitalized like any other word.
 
 #### Examples
 
-Write `HtmlParser` instead of `HTMLParser`.
+* `HtmlParser`
+* `rgbToHsl`
 
 #### Rationale
 
 Names containing adjacent capitals that belong to separate words may hinder
-readability.
+readability. Additionally, since function names must begin with a lower case
+letter, fully capitalizing all acronyms can be impossible.
 
 #### Exceptions
 
