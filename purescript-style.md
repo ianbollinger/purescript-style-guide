@@ -21,7 +21,7 @@ This style guide is licensed under the Creative Commons Zero license.
   * [1.8. Place each data type constructor on its own line](#18-place-each-data-type-constructor-on-its-own-line)
   * [1.9. Don't align types within record field declarations](#19-dont-align-types-within-record-field-declarations)
   * [1.10. Place each element in a long array on its own line](#110-place-each-element-in-a-long-array-on-its-own-line)
-  * [1.11. Precede items in arrays, records, and import lists with commas](#111-precede-items-in-arrays-records-and-import-lists-with-commas])
+  * [1.11. Precede items in arrays, records, and import lists with commas](#111-precede-items-in-arrays-records-and-import-lists-with-commas)
   * [1.12. Format export lists like arrays](#112-format-export-lists-like-arrays)
   * [1.13. Doubly indent nested record or array literals](#113-doubly-indent-nested-record-or-array-literals)
 - [2. Naming](#2-naming)
