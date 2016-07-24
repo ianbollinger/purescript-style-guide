@@ -136,7 +136,7 @@ be considered "long".
 
 #### Rationale
 
-This makes for more readable diffs when having to alter a long list.
+This makes for more readable diffs when having to alter a long array.
 
 #### Examples
 
