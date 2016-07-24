@@ -25,8 +25,9 @@ This style guide is licensed under the Creative Commons Zero license.
 - [2. Naming](#2-naming)
   * [2.1. Use camel case for function names](#21-use-camel-case-for-function-names)
   * [2.2. Use upper camel case for type names](#22-use-upper-camel-case-for-type-names)
-  * [2.3. Do not use all capitals for acronyms](#23-do-not-use-all-capitals-for-acronyms)
-  * [2.4. Use the singular for module names](#24-use-the-singular-for-module-names)
+  * [2.3. Use all capitals for effect names](#23-use-all-capitals-for-effect-names)
+  * [2.4. Do not use all capitals for acronyms](#24-do-not-use-all-capitals-for-acronyms)
+  * [2.5. Use the singular for module names](#25-use-the-singular-for-module-names)
 
 ## 1. Formatting
 
@@ -183,7 +184,17 @@ Data types and constructors must be written in upper camel case.
 
 Data types and constructors in PureScript must begin with a capital letter.
 
-### 2.3. Do not use all capitals for acronyms
+### 2.3. Use all capitals for effect names
+
+Effects should be written in all capital letters.
+
+#### Examples
+
+* `CONSOLE`
+* `EXCEPTION`
+* `RANDOM`
+
+### 2.4. Do not use all capitals for acronyms
 
 Only the first letter of an acronym should be capitalized.
 
@@ -200,7 +211,7 @@ readability.
 
 Two letter acronyms should have both letters capitalized--for example, `ST`.
 
-### 2.4. Use the singular for module names
+### 2.5. Use the singular for module names
 
 Use the singular when naming modules.
 
