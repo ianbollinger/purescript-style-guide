@@ -20,8 +20,8 @@ This style guide is licensed under the Creative Commons Zero license.
   * [1.7. Lines must not have trailing spaces](#17-lines-must-not-have-trailing-spaces)
   * [1.8. Place each data type constructor on its own line](#18-place-each-data-type-constructor-on-its-own-line)
   * [1.9. Don't align types within record field declarations](#19-dont-align-types-within-record-field-declarations)
-  * [1.10. Each element in a list on its own line](#110-each-element-in-a-list-on-its-own-line)
-  * [1.11. Format export lists like lists](#111-format-export-lists-like-lists)
+  * [1.10. Place each element in a long array on its own line](#110-place-each-element-in-a-long-array-on-its-own-line)
+  * [1.11. Format export lists like arrays](#111-format-export-lists-like-arrays)
   * [1.12. Doubly indent nested record or array literals](#112-doubly-indent-nested-record-or-array-literals)
 - [2. Naming](#2-naming)
   * [2.1. Use camel case for function names](#21-use-camel-case-for-function-names)
@@ -128,10 +128,15 @@ data Rectangle = Rectangle
   }
 ```
 
-### 1.10. Each element in a list on its own line
+### 1.10. Place each element in a long array on its own line
 
-Each successive element in a list should be placed on its own line, preceded by
-a comma and a space.
+Each successive element in a long array should be placed on its own line, preceded by
+a comma and a space. If an array literal doesn't fit on a single line then it should
+be considered "long".
+
+#### Rationale
+
+This makes for more readable diffs when having to alter a long list.
 
 #### Examples
 
@@ -140,12 +145,15 @@ elements =
   [ div
   , h1
   , p
+  , em
+  , span
+  , body
   ]
 ```
 
-### 1.11. Format export lists like lists
+### 1.11. Format export lists like arrays
 
-Export lists should be formatted like regular lists above (except with
+Export lists should be formatted like regular arrays above (except with
 parentheses instead of square brackets.)
 
 #### Examples
