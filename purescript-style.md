@@ -30,9 +30,13 @@ This style guide is licensed under the Creative Commons Zero license.
   * [2.3. Use all capitals for effect names](#23-use-all-capitals-for-effect-names)
   * [2.4. Do not use all capitals for acronyms](#24-do-not-use-all-capitals-for-acronyms)
   * [2.5. Use the singular for module names](#25-use-the-singular-for-module-names)
-- [3. Miscellaneous](#3-miscellaneous)
-  * [5.1. Avoid over-using point-free style](#51-avoid-over-using-point-free-style)
-  * [5.2. Code must be warning-free](#52-code-must-be-warning-free)
+- [3. Imports](#3-imports)
+  * [3.1. Group imported modules by origin](#31-group-imported-modules-by-origin)
+  * [3.2. Sort imports alphabetically](#32-sort-imports-alphabetically)
+  * [3.3. Qualify imports or explicitly list imported symbols](#33-qualify-imports-or-explicitly-list-imported-symbols)
+- [4. Miscellaneous](#3-miscellaneous)
+  * [4.1. Avoid over-using point-free style](#41-avoid-over-using-point-free-style)
+  * [4.2. Code must be warning-free](#42-code-must-be-warning-free)
 
 ## 1. General formatting
 
@@ -48,7 +52,7 @@ arbitrary and chosen for historical reasons.
 
 #### Exceptions
 
-* URLs must not be split over multiple lines.
+URLs must not be split over multiple lines.
 
 #### Examples
 
@@ -288,13 +292,40 @@ Module names should be in the singular.
 * Use `Data.String` instead of `Data.Strings`.
 * Use `Data.Function` instead of `Data.Functions`.
 
-## 3. Miscellaneous
+## 3. Imports
 
-### 5.1. Avoid over-using point-free style
+### 3.1. Group imported modules by origin
+
+Imports should be grouped in the following order:
+
+1. the `Prelude`
+2. other third-party imports
+3. local application or library imports
+
+### 3.2. Sort imports alphabetically
+
+The imports in each import group should be sorted alphabetically by module name.
+
+### 3.3. Qualify imports or explicitly list imported symbols
+
+Imported modules should either always be qualified or have explicit import lists.
+
+#### Rationale
+
+This makes your code more robust against changes in imported modules. It also makes
+your code compile without warnings.
+
+#### Exceptions
+
+The `Prelude` does not need to be qualified or have an implicit import list.
+
+## 4. Miscellaneous
+
+### 4.1. Avoid over-using point-free style
 
 Point-free style should be avoided when it inhibits readability.
 
-### 5.2. Code must be warning-free
+### 4.2. Code must be warning-free
 
 Code must not produce warnings when compiled.
 
