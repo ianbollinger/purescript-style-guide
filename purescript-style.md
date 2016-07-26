@@ -24,6 +24,7 @@ This style guide is licensed under the Creative Commons Zero license.
   * [1.11. Precede items in arrays, records, and import lists with commas](#111-precede-items-in-arrays-records-and-import-lists-with-commas)
   * [1.12. Format export lists like arrays](#112-format-export-lists-like-arrays)
   * [1.13. Doubly indent nested record or array literals](#113-doubly-indent-nested-record-or-array-literals)
+  * [1.14. Prefer case expressions over equational pattern matching](#114-prefer-case-expressions-over-equational-pattern-matching)
 - [2. Naming](#2-naming)
   * [2.1. Use camel case for function names](#21-use-camel-case-for-function-names)
   * [2.2. Use upper camel case for type names](#22-use-upper-camel-case-for-type-names)
@@ -54,16 +55,6 @@ arbitrary and chosen for historical reasons.
 
 URLs must not be split over multiple lines.
 
-#### Examples
-
-```purescript
-logShow
-  :: forall a eff
-   . Show a
-  => a
-  -> Eff (console :: CONSOLE | eff) Unit
-```
-
 ### 1.2. Do not use tabs
 
 Source files must not contain tab characters; use spaces for indentation.
@@ -78,16 +69,6 @@ especially if tabs have been mixed with spaces.
 ### 1.3. Indent with 2 spaces
 
 Code blocks should be indented with **2 spaces**.
-
-#### Examples
-
-```purescript
-catMaybes :: forall a. List (Maybe a) -> List a
-catMaybes = case _ of
-  Nil -> Nil
-  Nothing : xs -> catMaybes xs
-  Just x : xs -> x : catMaybes xs
-```
 
 ### 1.4. Separate top-level definitions with a blank line
 
@@ -146,13 +127,6 @@ data Rectangle = Rectangle
   , width :: Int
   , height :: Int
   }
-```
-
-```purescript
-instance semigroupMaybe :: Semigroup a => Semigroup (Maybe a) where
-  append Nothing y = y
-  append x Nothing = x
-  append (Just x) (Just y) = Just (x <> y)
 ```
 
 ### 1.10. Place each element in a long array on its own line
@@ -222,7 +196,7 @@ When nesting record or array literals, the nested literal should be doubly inden
 #### Examples
 
 ```purescript
-{ bounds: 
+{ bounds:
     { x: 0
     , y: 0
     , width: 400
@@ -235,6 +209,29 @@ When nesting record or array literals, the nested literal should be doubly inden
     , component3
     ]
 }
+```
+
+### 1.14. Prefer case expressions over equational pattern matching
+
+Case expressions should be used instead of equational pattern matching.
+
+#### Rationale
+
+If a function needs to be renamed when using a case expression in lieu of equational
+pattern maching, only a single edit needs to be made.
+
+#### Exceptions
+
+When matching multiple patterns, using equational pattern matching may be preferable.
+
+#### Examples
+
+```purescript
+catMaybes :: forall a. List (Maybe a) -> List a
+catMaybes = case _ of
+  Nil -> Nil
+  Nothing : xs -> catMaybes xs
+  Just x : xs -> x : catMaybes xs
 ```
 
 ## 2. Naming
