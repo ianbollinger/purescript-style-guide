@@ -6,7 +6,7 @@ code for a project. It is easier to read a project's source code when it all has
 a consistent style. It is easier to contribute code to a project when there is
 no question as to how something should be written.
 
-This style guide is licensed under the Creative Commons Zero license.
+This style guide is licensed under the [Creative Commons Zero license](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
 ## Table of contents
 
