@@ -19,7 +19,7 @@ This style guide is licensed under the Creative Commons Zero license.
   * [1.6. No space after a lambda](#16-no-space-after-a-lambda)
   * [1.7. Lines must not have trailing spaces](#17-lines-must-not-have-trailing-spaces)
   * [1.8. Place each data type constructor on its own line](#18-place-each-data-type-constructor-on-its-own-line)
-  * [1.9. Don't align types within record field declarations](#19-dont-align-types-within-record-field-declarations)
+  * [1.9. Don't align code](#19-dont-align-code)
   * [1.10. Place each element in a long array on its own line](#110-place-each-element-in-a-long-array-on-its-own-line)
   * [1.11. Precede items in arrays, records, and import lists with commas](#111-precede-items-in-arrays-records-and-import-lists-with-commas)
   * [1.12. Format export lists like arrays](#112-format-export-lists-like-arrays)
@@ -122,18 +122,20 @@ data Color
   | Green
 ```
 
-### 1.9. Don't align types within record field declarations
+### 1.9. Don't align code
 
-Types within field declarations must not be aligned with one another; instead,
-they should be flush against the field name.
+Do not align code. Types within field declarations must not be aligned with one
+another; instead, they should be flush against the field name. Additionally,
+patterns and arrows in pattern match cases should not be aligned with one
+another.
 
 #### Rationale
 
-Alignment makes it harder when updating code. If a new record field is added
-that is longer than the rest, the rest of the fields must be retabulated if the
-formatting is to be maintained. Doing so is even worse, however, because the
-resulting "diff" of the edit will indicate that several lines have changed, even
-though they were only reformatted.
+Alignment makes it harder when updating code. For instance, if a new record field
+is added that is longer than the rest, the rest of the fields must be retabulated
+if the formatting is to be maintained. Doing so is even worse, however, because
+the resulting "diff" of the edit will indicate that several lines have changed,
+even though they were only reformatted.
 
 #### Examples
 
@@ -144,6 +146,13 @@ data Rectangle = Rectangle
   , width :: Int
   , height :: Int
   }
+```
+
+```purescript
+instance semigroupMaybe :: Semigroup a => Semigroup (Maybe a) where
+  append Nothing y = y
+  append x Nothing = x
+  append (Just x) (Just y) = Just (x <> y)
 ```
 
 ### 1.10. Place each element in a long array on its own line
