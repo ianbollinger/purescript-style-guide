@@ -286,11 +286,6 @@ Effects should be written in all capital letters.
 
 Acronyms should be capitalized like any other word.
 
-#### Examples
-
-* `HtmlParser`
-* `rgbToHsl`
-
 #### Rationale
 
 Names containing adjacent capitals that belong to separate words may hinder
@@ -299,7 +294,13 @@ letter, fully capitalizing all acronyms can be impossible.
 
 #### Exceptions
 
-Two letter acronyms should have both letters capitalized--for example, `ST`.
+Two letter acronyms should have both letters capitalized.
+
+#### Examples
+
+* `HtmlParser`
+* `rgbToHsl`
+* `ST`
 
 ### 2.5. Use the singular for module names
 
