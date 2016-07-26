@@ -228,7 +228,7 @@ When nesting record or array literals, the nested literal should be doubly inden
     , width: 400
     , height: 300
     }
-, color: Rgba 128 0 0 255
+, color: Red
 , children:
     [ component1
     , component2
@@ -245,7 +245,9 @@ Functions must be written in camel case.
 
 #### Examples
 
-* `functionName`
+* `add`
+* `fromMaybe`
+* `isJust`
 
 #### Rationale
 
@@ -257,7 +259,9 @@ Data types and constructors must be written in upper camel case.
 
 #### Examples
 
-* `DataType`
+* `Maybe`
+* `CommutativeRing`
+* `STRef`
 
 #### Rationale
 
