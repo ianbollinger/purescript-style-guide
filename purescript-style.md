@@ -39,8 +39,8 @@ This style guide is licensed under the Creative Commons Zero license.
   * [4.1. Use Markdown syntax in documentation comments](#41-use-markdown-syntax-in-documentation-comments)
   * [4.2. Comment every exported definition](#42-comment-every-exported-definition)
 - [5. Miscellaneous](#3-miscellaneous)
-  * [5.1. Avoid over-using point-free style](#41-avoid-over-using-point-free-style)
-  * [5.2. Code must be warning-free](#42-code-must-be-warning-free)
+  * [5.1. Avoid over-using point-free style](#51-avoid-over-using-point-free-style)
+  * [5.2. Code must be warning-free](#52-code-must-be-warning-free)
 
 ## 1. General formatting
 
