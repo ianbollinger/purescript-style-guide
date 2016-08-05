@@ -236,10 +236,11 @@ When matching multiple patterns, using equational pattern matching may be prefer
 
 ```purescript
 catMaybes :: forall a. List (Maybe a) -> List a
-catMaybes = case _ of
-  Nil -> Nil
-  Nothing : xs -> catMaybes xs
-  Just x : xs -> x : catMaybes xs
+catMaybes =
+  case _ of
+    Nil -> Nil
+    Nothing : xs -> catMaybes xs
+    Just x : xs -> x : catMaybes xs
 ```
 
 ## 2. Naming
